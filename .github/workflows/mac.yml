@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [arm64, amd64]   # arm64 = Apple-Chip (M1/M2/...), amd64 = Intel-Mac
+        arch: [arm64]   # später: amd64 für Intel-Macs ergänzen
     runs-on: macos-latest
     env:
       ARCH: ${{ matrix.arch }}
@@ -22,7 +22,19 @@ jobs:
           cache-dependency-path: programm/go.sum
       - name: Tri-Vertical.app bauen
         working-directory: programm
-        run: bash baue_mac.sh
+        run: |
+          set -o pipefail
+          bash -x baue_mac.sh 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
+      - name: Fehlerprotokoll als Hinweis ausgeben
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          import os,urllib.parse
+          t=open(os.environ["GITHUB_WORKSPACE"]+"/build.log",errors="replace").read().splitlines()[-45:]
+          m="\n".join(l[:300] for l in t)
+          m=m.replace("%","%25").replace("\r","%0D").replace("\n","%0A")
+          print("::error title=Buildlog::"+m)
+          PY
       - name: ZIP erzeugen
         run: ditto -c -k --keepParent mac-build/Tri-Vertical.app Tri-Vertical-Mac-${{ matrix.arch }}.zip
       - uses: actions/upload-artifact@v4
