@@ -19,13 +19,18 @@ if [ ! -f roh/lib/darwin/libraw.a ]; then
   git clone https://github.com/LibRaw/LibRaw.git "$T/src"
   (cd "$T/src" && git checkout "$(tr -d '[:space:]' < "$OLDPWD/roh/quelle/LIBRAW-COMMIT.txt")")
   mkdir -p roh/lib/darwin
-  # bauelr.sh erwartet einen Compiler ohne Leerzeichen: kleine Hülle mit -arch
-  printf '#!/bin/sh
-exec clang++ -arch %s "$@"
-' "$CARCH" > "$T/cxx.sh"
-  chmod +x "$T/cxx.sh"
-  bash roh/quelle/bauelr.sh "$T/src" "$PWD/roh/lib/darwin" "$T/cxx.sh" ar
-  rm -rf "$T"
+  # Eigene Compile-Schleife (das macOS-xargs verträgt bauelr.sh nicht)
+  OUT="$PWD/roh/lib/darwin"; export OUT CARCH
+  mkdir -p "$OUT/o"
+  cat > "$T/cc1.sh" <<'CC'
+#!/bin/sh
+f="$1"
+o="$OUT/o/$(echo "$f" | tr / _).o"
+exec clang++ -arch "$CARCH" -O2 -std=gnu++14 -D_USE_MATH_DEFINES -w -I. -DLIBRAW_NOTHREADS -DUSE_X3FTOOLS -DLIBRAW_NODLL -c "$f" -o "$o"
+CC
+  (cd "$T/src" && find src -name '*.cpp' ! -path '*integration*' | xargs -P 8 -n 1 sh "$T/cc1.sh")
+  ar rcs "$OUT/libraw.a" "$OUT"/o/*.o
+  rm -rf "$OUT/o" "$T"
   N=$(ar t roh/lib/darwin/libraw.a | wc -l)
   echo "LibRaw: $N Objektdateien"
   if [ "$N" -lt 50 ]; then echo "FEHLER: LibRaw-Bau unvollständig"; rm -f roh/lib/darwin/libraw.a; exit 1; fi
