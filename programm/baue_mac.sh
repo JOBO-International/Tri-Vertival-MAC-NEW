@@ -19,8 +19,16 @@ if [ ! -f roh/lib/darwin/libraw.a ]; then
   git clone https://github.com/LibRaw/LibRaw.git "$T/src"
   (cd "$T/src" && git checkout "$(tr -d '[:space:]' < "$OLDPWD/roh/quelle/LIBRAW-COMMIT.txt")")
   mkdir -p roh/lib/darwin
-  bash roh/quelle/bauelr.sh "$T/src" "$PWD/roh/lib/darwin" "clang++ -arch $CARCH" ar
+  # bauelr.sh erwartet einen Compiler ohne Leerzeichen: kleine Hülle mit -arch
+  printf '#!/bin/sh
+exec clang++ -arch %s "$@"
+' "$CARCH" > "$T/cxx.sh"
+  chmod +x "$T/cxx.sh"
+  bash roh/quelle/bauelr.sh "$T/src" "$PWD/roh/lib/darwin" "$T/cxx.sh" ar
   rm -rf "$T"
+  N=$(ar t roh/lib/darwin/libraw.a | wc -l)
+  echo "LibRaw: $N Objektdateien"
+  if [ "$N" -lt 50 ]; then echo "FEHLER: LibRaw-Bau unvollständig"; rm -f roh/lib/darwin/libraw.a; exit 1; fi
 fi
 
 # 2. Programm bauen
