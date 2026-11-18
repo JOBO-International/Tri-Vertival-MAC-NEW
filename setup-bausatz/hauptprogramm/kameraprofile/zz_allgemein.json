@@ -1,0 +1,12 @@
+{
+  "name": "Allgemein (andere Kameras)",
+  "hersteller": "alle anderen",
+  "modelle": "alle übrigen Kameras",
+  "neigung": "automatisch, falls die Kamera Neigungsdaten speichert (meist mit exiftool, z. B. Pentax)",
+  "formate": "JPEG, HEIC, DNG, TIFF, PNG, WebP",
+  "match": {},
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "kb_brennweite_standard": 28,
+  "hinweis": "Sucht automatisch nach Feldern 'RollAngle' und 'PitchAngle'."
+}

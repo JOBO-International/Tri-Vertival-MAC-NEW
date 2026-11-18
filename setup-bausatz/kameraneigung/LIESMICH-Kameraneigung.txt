@@ -1,0 +1,65 @@
+TRI-VERTICAL KAMERANEIGUNG 1.3 – Zusatzprogramm zu Tri-Vertical
+=========================================================
+
+Was es macht
+------------
+Manche Kameras messen beim Fotografieren, wie schief sie gehalten wurden,
+und speichern diese Neigungswinkel in der Bilddatei: iPhone, Leica M11,
+Q3, SL3, D-Lux 8, Lumix L10 und weitere (siehe Kameras → "Bekannte Kameras
+anzeigen" in Tri-Vertical).
+
+Mit diesem Zusatz
+  • übernimmt Tri-Vertical beim Öffnen eines Bildes diese Winkel automatisch
+    als Roll und Pitch – das Bild ist sofort korrigiert. Die Zeile
+    "Neigungsdaten: Roll …, Pitch …" im Bedienfeld zeigt die Werte;
+    der Knopf "Kameraneigung" stellt sie wieder her, falls du die Regler
+    verändert hast;
+  • lassen sich ganze Ordner in einem Durchgang korrigieren: Menü Datei
+    bzw. Knopf "Stapelverarbeitung (Kameraneigung)" – Ordner wählen, jedes
+    Bild wird mit seinen eigenen Winkeln korrigiert und im Unterordner
+    "korrigiert" gespeichert. Yaw und "Zuschneiden" werden aus den
+    aktuellen Einstellungen in Tri-Vertical übernommen. Bilder ohne
+    Neigungsdaten werden übersprungen.
+
+Die Automatik (Taste A) bleibt wie gewohnt nutzbar – auch zum Nachkorrigieren.
+Hat man bereits Regler verstellt, überschreibt der Zusatz nichts.
+
+Voraussetzung: Tri-Vertical ab Version 3.1.
+Deinstallieren: Einstellungen → Apps → "Tri-Vertical Kameraneigung".
+
+
+Weitere Kameras
+---------------
+Kameraprofil-Datei (Endung .v3cam) doppelklicken – oder Menü
+Kameras → "Kameraprofil importieren …". Mehrere Dateien auf einmal gehen.
+Unter Kameras → "Bekannte Kameras anzeigen" zeigt eine Tabelle alle
+Kameras: Hersteller, Modelle, wie die Neigung ermittelt wird und welche
+Dateiformate passen. Erkannt wird am Hersteller – andere Modelle desselben
+Herstellers funktionieren also ebenfalls.
+
+iPhone, Leica und Lumix liest das Zusatzprogramm selbst. NIKON speichert die
+Neigung verschlüsselt – dafür wird exiftool benötigt, ebenso für andere
+Kameras mit Neigungsdaten (z. B. OM System, Pentax): von https://exiftool.org die "Windows Executable" laden, in den
+Programmordner entpacken (Kameras → Profilordner öffnen, eine Ebene höher),
+"exiftool(-k).exe" in "exiftool.exe" umbenennen, den Ordner
+"exiftool_files" daneben lassen.
+
+Profil selbst schreiben (für Fortgeschrittene): im Profilordner eine
+vorhandene .json-Datei kopieren und anpassen:
+
+  {
+    "name": "Meine Kamera",
+    "match": { "Make": "hersteller", "Model": "modell" },
+    "roll_tag": "RollAngle",
+    "pitch_tag": "PitchAngle",
+    "roll_faktor": 1.0,
+    "pitch_faktor": 1.0
+  }
+
+  match      – woran die Kamera erkannt wird (Teil von Hersteller/Modell)
+  *_faktor   – auf -1.0 setzen, wenn die Korrektur falsch herum wirkt
+  "keine_neigungsdaten": true – für Kameras/Handys ohne Neigungsmesser
+
+Hinweis: Die Profile für iPhone, Leica und Lumix sind noch nicht mit
+echten Fotos geprüft. Wirkt eine Korrektur falsch herum, ein Originalfoto
+schicken – dann gibt es eine korrigierte .v3cam-Datei.

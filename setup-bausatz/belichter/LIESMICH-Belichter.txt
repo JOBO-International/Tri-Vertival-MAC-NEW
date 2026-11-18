@@ -1,0 +1,25 @@
+﻿TRI-VERTICAL BELICHTER 1.0 – Zusatzprogramm zu Tri-Vertical
+==========================================================
+
+Erstellt Bögen für den digitalen Schwarzweiß-Belichter.
+
+Aufruf: Bild in Tri-Vertical öffnen und ausrichten, dann im Menü Datei
+"S/W-Bogen für den Belichter …" oder Strg+B. Das Foto wird mit der
+Perspektivkorrektur übernommen.
+
+  • Schwarzweiß: S/W-Looks, klassische Farbfilter (Gelb, Orange, Rot,
+    Grün, Blau), S/W-Filme; Helligkeit und Kontrast. Das Ergebnis ist
+    exakt neutral grau (R = G = B).
+  • Bogen: ein Bild über den ganzen Bogen oder kleinere Formate
+    (9 × 13 bis 30 × 45 cm) automatisch angeordnet, mit einstellbarem
+    Abstand und Schnittmarken. Weitere Bilder lassen sich hinzufügen;
+    sie werden der Reihe nach auf die Plätze verteilt.
+  • Speichern: TIFF, RGB 8 Bit, unkomprimiert, 300 dpi, 50 × 40 cm
+    (5906 × 4724 Pixel).
+
+Belichtungsfläche: Die Belichter-Software skaliert die 50 × 40-Datei
+auf die tatsächliche Belichtungsfläche (48,8 × 38,6 cm). Tri-Vertical
+gleicht das aus – ein 13 × 18 wird wirklich 13 × 18 cm groß.
+Einmal prüfen: "Testbogen speichern …", belichten, die beiden
+10-cm-Quadrate nachmessen und bei Abweichung die gemessenen Werte
+unter "Einrichtung …" eintragen.

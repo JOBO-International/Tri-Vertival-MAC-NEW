@@ -1,0 +1,9 @@
+{
+  "name": "Tri-Vertical KI-Füllen",
+  "exe": "Vertical3-KI.exe",
+  "version": "1.2",
+  "menuetext": "Ränder mit KI füllen …",
+  "taste": "Strg+K",
+  "knopf": "KI-Füllen   ·   Strg+K",
+  "beschreibung": "Ausrichten ohne Beschnitt: leere Ränder per KI füllen, Originalformat bleibt erhalten"
+}

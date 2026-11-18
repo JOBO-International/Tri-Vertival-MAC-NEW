@@ -1,0 +1,38 @@
+﻿TRI-VERTICAL RAHMEN 1.5 – Zusatzprogramm
+=====================================
+
+Voraussetzung: Tri-Vertical ab Version 2.8 ist installiert.
+
+Installation: "Vertical3-Rahmen-Setup.exe" doppelklicken. Das Setup findet
+Tri-Vertical selbst. Danach Tri-Vertical neu starten – im Menü Datei und im
+Bedienfeld erscheint "Rahmen" (Tastenkürzel Strg+R).
+
+Bedienung: Bild in Tri-Vertical öffnen und korrigieren, dann Rahmen wählen.
+Foto und Korrektur werden übernommen.
+  • 19 Rahmen:
+      Klassisch:     Linie (Breite und Farbe), Doppellinie (Farbe),
+                     Passepartout, Passepartout ohne Linie, Galerie, Museum
+      Bilderrahmen:  Holz hell, Nussbaum, Schwarz, Weiß, Gold – jeweils mit
+                     Passepartout und geschnittener Kante
+      Modern:        Schwebend mit Schatten, Abgerundete Ecken,
+                     Unscharfer Hintergrund
+      Analog:        Polaroid, Diarahmen, Kleinbildfilm mit Perforation,
+                     Film (schwarzer Rand), Büttenrand (Vintage-Abzug)
+    Linienfarben: Schwarz, Dunkelgrau, Grau, Weiß, Creme, Dunkelblau,
+    Dunkelgrün, Bordeaux
+  • Beschriftung: eigener Text, Dateiname, Aufnahmedatum, Kamera und
+    Objektiv oder Datum · Kamera; Schriftgröße einstellbar
+  • Proportionen ("wirkt wie 13×18 … 40×60 cm"): Rahmenbreite und Schrift
+    werden so bemessen, als würde das Bild in dieser Größe gedruckt
+  • "Bild speichern …": JPEG, TIFF oder PNG – das Foto behält seine volle
+    Auflösung, der Rahmen wird ergänzt; das Original bleibt unverändert
+  • "Filter …" (nur mit dem Zusatz "Tri-Vertical Filter"): übergibt das Foto
+    (korrigiert, ohne Rahmen) an das Filterfenster; mit "Rahmen …" geht es
+    von dort mit dem gefilterten Bild wieder zurück
+  • "Drucken …" (nur mit dem Zusatz "Tri-Vertical Drucken"): übergibt das
+    gerahmte Bild direkt an das Druckfenster
+
+Allein starten: Startmenü → Tri-Vertical → Tri-Vertical Rahmen (fragt nach einem
+Bild, dann ohne Perspektivkorrektur).
+
+Deinstallation: Windows-Einstellungen → Apps → "Tri-Vertical Rahmen".

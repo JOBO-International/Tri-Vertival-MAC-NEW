@@ -1,0 +1,20 @@
+{
+  "name": "Canon Vollformat (R1, R3, R5, R6, R8, RP, 5D, 6D …)",
+  "hersteller": "Canon",
+  "modelle": "Vollformat: EOS R1, R3, R5 (II), R6 (II/III), R8, R, RP, 1D X, 5D, 6D; Kompakte (PowerShot)",
+  "neigung": "automatisch (neuere Modelle, mit exiftool)",
+  "formate": "JPEG, HEIF (.HIF), DNG (aus CR3/CR2)",
+  "match": {
+    "Make": "canon"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "hinweis_ohne_exiftool": "Canon speichert die Neigung (bei neueren EOS-R-Modellen) in den Herstellerdaten – zum Auslesen wird exiftool benötigt (siehe Hilfe → Anleitung, Abschnitt 4).",
+  "hinweis": "Neuere Canon-Modelle speichern Roll und Pitch in den Herstellerdaten (exiftool nötig)."
+}

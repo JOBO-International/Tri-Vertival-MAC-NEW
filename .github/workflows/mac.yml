@@ -1,0 +1,30 @@
+name: Mac-App bauen
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+jobs:
+  mac:
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [arm64, amd64]   # arm64 = Apple-Chip (M1/M2/...), amd64 = Intel-Mac
+    runs-on: macos-latest
+    env:
+      ARCH: ${{ matrix.arch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+      - name: Tri-Vertical.app bauen
+        working-directory: programm
+        run: ./baue_mac.sh
+      - name: ZIP erzeugen
+        run: ditto -c -k --keepParent mac-build/Tri-Vertical.app Tri-Vertical-Mac-${{ matrix.arch }}.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Tri-Vertical-Mac-${{ matrix.arch }}
+          path: Tri-Vertical-Mac-${{ matrix.arch }}.zip

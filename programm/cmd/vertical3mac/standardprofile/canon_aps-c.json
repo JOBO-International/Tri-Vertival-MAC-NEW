@@ -1,0 +1,22 @@
+{
+  "name": "Canon APS-C (R7, R10, R50, R100, EOS M, 90D …)",
+  "hersteller": "Canon",
+  "modelle": "APS-C: EOS R7, R10, R50, R100, EOS M-Serie, 2000D–850D, 80D/90D, 7D",
+  "neigung": "automatisch (neuere Modelle, mit exiftool)",
+  "formate": "JPEG, HEIF (.HIF), DNG (aus CR3/CR2)",
+  "match": {
+    "Make": "canon",
+    "Model": "EOS (R7|R10|R50|R100|M\\d*|\\d{2,4}D|7D|Rebel|Kiss)"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "cropfaktor": 1.6,
+  "hinweis_ohne_exiftool": "Canon speichert die Neigung (bei neueren EOS-R-Modellen) in den Herstellerdaten – zum Auslesen wird exiftool benötigt (siehe Hilfe → Anleitung, Abschnitt 4).",
+  "hinweis": "APS-C-Sensor: Brennweite × 1,6. Neuere Canon-Modelle speichern Roll und Pitch in den Herstellerdaten (exiftool nötig)."
+}

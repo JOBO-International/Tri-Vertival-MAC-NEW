@@ -1,0 +1,34 @@
+Tri-Vertical 3.9.1 für macOS
+============================
+
+Die Mac-Version nutzt denselben Kern wie die Windows-Version (Perspektivkorrektur, Automatik,
+Kameraprofile, RAW/HEIC/DNG, Speichern mit Exif). Nur die Oberfläche ist neu (Fyne statt lxn/walk).
+Der Quellcode steht in programm\cmd\vertical3mac. Die Windows-Version bleibt unverändert.
+
+Bauen (auf einem Mac, Terminal)
+-------------------------------
+1. Einmalig:  xcode-select --install     und Go (ab 1.24) installieren, z. B.  brew install go
+2. Ordner "programm" öffnen und ausführen:   ./baue_mac.sh
+   (baut beim ersten Mal LibRaw aus dem Quellcode, dauert einige Minuten; braucht Internet)
+3. Ergebnis: mac-build/Tri-Vertical.app  (nach "Programme" ziehen)
+   Beim ersten Start: Rechtsklick -> Öffnen (die App ist nicht von Apple notarisiert).
+   Intel-Mac: ARCH=amd64 ./baue_mac.sh   Apple-Chip: ARCH=arm64 ./baue_mac.sh
+
+Optional:  brew install exiftool   (zusätzliche Kameradaten aus Herstellerdaten)
+
+Unterschiede zur Windows-Version (Stand jetzt)
+----------------------------------------------
+Enthalten:  Bild öffnen/ziehen, Roll/Pitch/Yaw/Brennweite, Automatik (A) und frontal (Umschalt+A),
+            Bezugsmarken (Senkrechte, Waagerechte, rechter Winkel, Rechteck, Kreis) mit Ausgleichsrechnung,
+            Zoom (Mausrad/Trackpad, Ziehen verschiebt, Knöpfe + − Ganzes Bild),
+            Drehen/Spiegeln (Menü Bild, ⌘← / ⌘→), Vorher/Nachher nebeneinander (V), Original (Leertaste),
+            Ausgabegrößen wie unter Windows; bei festem Seitenverhältnis mit Ausschnitt per Schieberegler
+            (Größe, waagerecht, senkrecht, Hoch-/Querformat), Zuschneiden, Randfarbe,
+            Speichern (jpg/tif/png), Kameraprofile importieren/anzeigen.
+Fehlt noch: Ausschnittsrahmen per Maus ziehen (hier Regler), eigene Ausgabegrößen, Marken per Maus
+            verschieben, Zoom auf 100 % (Vorschau hat max. 1600 px), Designs, Zusatzprogramme (Filter,
+            Rahmen, Drucken, KI), Update-Installation (.v3update).
+Profile und Einstellungen liegen in ~/Library/Application Support/Tri-Vertical.
+
+Wichtig: Diese Mac-Version wurde auf Windows geschrieben und nur typgeprüft, noch nicht auf einem
+Mac gestartet. Beim ersten Bauen können kleine Anpassungen nötig sein.

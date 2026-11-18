@@ -1,0 +1,9 @@
+{
+  "name": "Tri-Vertical Filter",
+  "exe": "Vertical3-Filter.exe",
+  "version": "1.5",
+  "menuetext": "Filter …",
+  "taste": "Strg+F",
+  "knopf": "Filter   ·   Strg+F",
+  "beschreibung": "55 Bildlooks (Farbe, Kamera-Looks, analoge Filme, Sofortbild, S/W-Filme, Edeldrucke wie Palladium), Feinabstimmung und eigene Filter"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Fujifilm GFX (Mittelformat)",
+  "hersteller": "Fujifilm",
+  "modelle": "GFX 100 II, GFX 100S (II), GFX 100RF, GFX 50S (II), GFX 50R",
+  "neigung": "meist keine – per Regler oder Kanten markieren",
+  "formate": "JPEG, HEIF (.HIF), DNG (aus RAF)",
+  "match": {
+    "Make": "fujifilm",
+    "Model": "GFX"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "cropfaktor": 0.79,
+  "hinweis": "Mittelformat-Sensor: Brennweite × 0,79."
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Leica (M11, Q3, SL3, D-Lux 8, …)",
+  "hersteller": "Leica",
+  "modelle": "M11, Q3, SL3 und andere mit Digital Shift Assistant; D-Lux 7/8",
+  "neigung": "automatisch",
+  "formate": "JPEG, DNG",
+  "match": {
+    "Make": "leica"
+  },
+  "roll_tag": [
+    "XMP-xmpDSA:RollAngle",
+    "Panasonic:RollAngle",
+    "Leica:RollAngle",
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "XMP-xmpDSA:PitchAngle",
+    "Panasonic:PitchAngle",
+    "Leica:PitchAngle",
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "brennweite_tag": "XMP-xmpDSA:FocalLength35mm",
+  "bereits_korrigiert_tag": "XMP-xmpDSA:CorrectionAlreadyApplied",
+  "hinweis": "Neuere Leicas speichern die Neigung im XMP-Block des 'Digital Shift Assistant', D-Lux-Modelle in den Panasonic-Herstellerdaten – beides liest Vertical3 selbst. Hat die Kamera schon selbst entzerrt, wird nicht doppelt korrigiert."
+}

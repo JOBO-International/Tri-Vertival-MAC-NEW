@@ -1,0 +1,9 @@
+{
+  "name": "Tri-Vertical Belichter",
+  "exe": "Vertical3-Belichter.exe",
+  "version": "1.0",
+  "menuetext": "S/W-Bogen für den Belichter …",
+  "taste": "Strg+B",
+  "knopf": "Belichter (S/W)   ·   Strg+B",
+  "beschreibung": "S/W-Bogen für den digitalen Schwarzweiß-Belichter: S/W-Looks und Farbfilter, Ausschießen kleinerer Formate mit Schnittmarken, TIFF in RGB 50 × 40 cm / 300 dpi mit Ausgleich der Belichtungsfläche, Testbogen"
+}

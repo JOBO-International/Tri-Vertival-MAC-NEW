@@ -1,0 +1,15 @@
+{
+  "name": "Panasonic Lumix (z. B. L10)",
+  "hersteller": "Panasonic",
+  "modelle": "Lumix L10, S5 II, G9 II und weitere mit Neigungssensor",
+  "neigung": "automatisch",
+  "formate": "JPEG, DNG (aus RW2)",
+  "match": {
+    "Make": "panasonic"
+  },
+  "roll_tag": "RollAngle",
+  "pitch_tag": "PitchAngle",
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "hinweis": "Panasonic speichert Roll und Pitch in den Herstellerdaten."
+}

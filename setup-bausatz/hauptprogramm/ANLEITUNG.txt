@@ -1,0 +1,188 @@
+TRI-VERTICAL 3.9.1 (bisher Vertical3) – Perspektivkorrektur für Windows
+================================================
+Nur für den privaten Gebrauch.
+
+
+1. INSTALLATION
+---------------
+"Vertical3-Setup.exe" doppelklicken und den Schritten folgen.
+Es muss nichts vorher installiert sein, Internet ist nicht nötig,
+Administratorrechte auch nicht. Danach liegt Vertical3 im Startmenü
+und auf dem Desktop.
+
+Windows zeigt eventuell "Der Computer wurde durch Windows geschützt" an,
+weil das Setup nicht signiert ist: "Weitere Informationen" →
+"Trotzdem ausführen".
+
+Wer vorher Version 1.x (mit Python) installiert hatte: Das Setup räumt
+die alte Version automatisch ab. Eigene Kameraprofile bleiben erhalten.
+
+Deinstallieren: Startmenü → Vertical3 → "Tri-Vertical deinstallieren"
+oder über Einstellungen → Apps.
+
+
+2. BEDIENUNG
+------------
+Bild öffnen (Strg+O). Unterstützt: JPG, HEIC/HEIF (auch .HIF von Canon, Fujifilm, Sony), TIFF, PNG, WebP
+und RAW: DNG sowie die RAW-Formate der gängigen Kameras (Nikon NEF/NRW, Canon CR2/CR3/CRW,
+Sony ARW/SR2/SRF, Panasonic/Leica RW2/RWL/RAW, Olympus/OM ORF, Fujifilm RAF, Pentax PEF,
+Samsung SRW, Hasselblad 3FR/FFF, Phase One IIQ, Sigma X3F, Minolta MRW, Kodak, Epson,
+Mamiya u. a.).
+
+RAW-Dateien werden beim Öffnen entwickelt (Entwicklung mit LibRaw bzw. – bei
+DNG – mit dem eigenen Entwickler): Weißabgleich und Farben wie von der Kamera
+vorgesehen, Helligkeit automatisch angepasst, Ergebnis in sRGB. Die Kamera-
+drehung (Hoch-/Querformat) wird übernommen. Je nach Größe dauert das einige
+Sekunden. Gespeichert wird als JPEG (Name + "_korr"); für feine Bildbearbeitung
+(Belichtung, Kontrast, Rauschen) die RAW-Datei besser in einem RAW-Entwickler
+bearbeiten und das Ergebnis als TIFF hierher geben. Lässt sich eine RAW-Datei
+nicht entwickeln (sehr neue Kamera, ungewöhnliche Komprimierung), zeigt
+Tri-Vertical das in der Datei eingebettete Vorschaubild und weist darauf hin.
+Nicht entwickelt werden Fujifilm-X-Trans-DNG und neuere ProRAW-Dateien mit
+JPEG-XL-Kompression – dort erscheint ebenfalls das Vorschaubild. Lizenz der
+RAW-Bibliothek: LIZENZEN-RAW.txt im Programmordner.
+
+Drehen und Spiegeln (Bedienfeld oder Menü Bild):
+  "Links drehen 90°" (Strg+←), "Rechts drehen 90°" (Strg+→),
+  "Spiegeln ↔" (links/rechts) und "Spiegeln ↕" (oben/unten). Gesetzte
+  Die Korrekturwerte werden automatisch mitgedreht – die Korrektur bleibt
+  also erhalten. Am besten ein falsch liegendes Bild zuerst drehen und
+  danach automatisch ausrichten.
+
+Automatisch ausrichten (Taste A):
+  Vertical3 bestimmt für jeden Bildpunkt mit deutlicher Kante die örtliche
+  Richtung und sucht dann die Kamerawinkel, bei denen nach der Korrektur
+  möglichst viel davon genau senkrecht steht – eine Statistik über das
+  ganze Bild (es werden keine Linien und keine Fluchtpunkte gesucht).
+  Das funktioniert bei Gebäuden, Innenräumen, Möbeln, Messeständen usw.
+  Seit 3.8.6 zählen dabei auch waagerechte Kanten mit (halbes Gewicht):
+  Roll und Pitch werden aus senkrechten und waagerechten Kanten gemeinsam
+  bestimmt, ohne Yaw. Nur Kanten, die nach der Korrektur fast waagerecht
+  stehen, fließen ein; die Abweichung von der rein senkrechten Lösung ist
+  auf 3° begrenzt.
+  Grüne Punkte zeigen die Kanten, die danach gerade stehen (Taste K blendet
+  sie aus); die Statuszeile nennt die Übereinstimmung in Prozent.
+  "Automatisch frontal" (Umschalt+A): zusätzlich waagerechte Kanten – eine
+  Fassade oder Wand wird so dargestellt, als stünde man genau davor (Yaw).
+  Ohne senkrechte Strukturen (Meer, Strand) dreht Vertical3 nur nach dem
+  Horizont (Roll). Ohne jede klare Struktur (Pflanzen, Porträt) meldet es
+  das und ändert nichts. Findet die Statistik nichts, versucht Vertical3
+  zusätzlich Rechtecke und Kreise im Bild zu erkennen.
+  Sehr starke Korrekturen (z. B. steil nach oben fotografierte Hochhäuser)
+  wendet die Automatik nur so weit an, dass das Bild nicht extrem verzerrt
+  wird, und nennt in der Statuszeile den vollen Wert – am Regler "Pitch"
+  lässt sich bei Bedarf weiter korrigieren.
+  Wichtig: Für einen genauen Pitch muss die Brennweite stimmen (steht sie
+  nicht in den Kameradaten, bitte den Regler "Brennweite" einstellen).
+
+  Oder einfach die Regler bewegen.
+
+Regler (0,1°-Schritte):
+  ziehen, oder Mausrad über dem Regler (mit Umschalt-Taste in 1°-Schritten);
+  ein Klick auf die Zahl rechts öffnet ein Feld zum genauen Eintippen.
+  Roll   – Bild gerade rücken (Horizont)
+  Pitch  – stürzende Linien aufrichten
+  Yaw    – virtueller Perspektivwechsel nach links/rechts
+           Der Bereich richtet sich nach Brennweite und Bildformat (etwa
+           drei Viertel des halben Bildwinkels, z. B. ±27,5° bei 23 mm quer,
+           ±18,5° bei 28 mm hoch) – größere Werte würden das Bild nur noch
+           extrem verzerren. Die Grenze steht neben dem Regler ("max ±…").
+  Brennweite – wird aus dem Foto gelesen; nur ändern, wenn das Ergebnis
+               gestaucht oder gestreckt wirkt
+
+Design: Menü Ansicht → Design
+  "Hell"    – weiß, blauer Akzent (Standard)
+  "Dunkel"  – schwarz, weiße Schrift, rote Akzente
+  "Analog"  – warm wie Fotopapier und Dunkelkammer: Elfenbein, Sepia-
+              Schrift, Rotlicht-Akzent, Werte in Schreibmaschinenschrift
+  Die Wahl wird gespeichert. Nach einer Neuinstallation startet Vertical3
+  immer im Design "Hell".
+
+Ansicht (Schalter im Bedienfeld, farbig = an):
+  V         = Vorher / Nachher nebeneinander (gleicher Maßstab)
+  Leertaste = zwischen Original und Ergebnis umschalten
+  K         = erkannte Kanten (grüne Punkte) ein-/ausblenden
+  A         = automatisch ausrichten,  Umschalt+A = automatisch frontal
+  Zoom      = Mausrad (vergrößert dort, wo die Maus steht), Tasten + und −,
+              Knöpfe "−", "GANZ", "+" im Bedienfeld oder Menü Ansicht
+  0         = ganzes Bild,  1 = 100 % (ein Bildschirmpunkt = ein Fotopixel)
+  Verschieben = im vergrößerten Bild mit gedrückter linker Maustaste ziehen
+  Gezoomt wird aus der vollen Auflösung – so lassen sich Details prüfen und
+  Kanten genau prüfen. Zoom gilt für die Einzelansicht.
+  "Auf Bildinhalt zuschneiden" = größtmögliches Bild ohne Rand;
+  aus = ganzes Bild mit Rändern (z. B. später in Photoshop auffüllen)
+
+Ausgabegröße (Knopf "Größe" über "Speichern" oder Menü Bild → Ausgabegröße):
+  Original (volle Auflösung) oder eine Standardgröße: 4K, Full HD, längste
+  Seite 3000/2048/1600/1080/800 px, 50 % und 25 % sowie alle üblichen
+  Fotopapier-Formate (berechnet mit 300 dpi, das Bild passt vollständig
+  aufs Papier):
+    Fotolabor: 9×13, 10×15, 11×15, 13×18, 13×19, 15×20, 15×21, 18×24,
+      18×27, 20×25, 20×30, 24×30, 24×36, 30×40, 30×45, 40×50, 40×60,
+      50×60, 50×70, 50×75, 60×80, 60×90 cm
+    Quadratisch: 10×10, 13×13, 15×15, 20×20, 30×30 cm
+    Panorama: 10×30, 20×60 cm
+    DIN: A6, A5, A4, A3, A3+, A2
+    Zoll: 4×6, 5×7, 8×10, Letter 8,5×11, 11×14, 13×19 Das Seitenverhältnis bleibt immer erhalten; bei Kästen wie
+  "passt in 1920 × 1080" richtet sich der Kasten nach Hoch- oder Querformat.
+  Eigene Größen: unten im Fenster Name, Art (längste Seite, Breite, Höhe,
+  passt in B × H, Druckformat in cm, Prozent) und Werte eingeben →
+  "Speichern". Eigene Größen stehen danach dauerhaft in der Liste (mit
+  "(eigene)" gekennzeichnet) und lassen sich wieder löschen.
+  Die gewählte Größe gilt für alle weiteren Bilder – auch nach einem
+  Neustart – bis eine andere gewählt wird. "Kleinere Bilder nicht
+  vergrößern" verhindert, dass kleine Bilder hochgerechnet werden.
+  Die Stapelverarbeitung (Zusatz Kameraneigung) nutzt dieselbe Größe.
+  Druckqualität: Bei Fotopapier zeigt Vertical3, wie viele dpi das Bild auf
+  dem gewählten Papier tatsächlich hat (die Pixel des korrigierten Bildes
+  zählen – Hochrechnen bringt keine echte Schärfe):
+    ab 300 dpi   sehr gut      250–299 dpi  gut
+    200–249 dpi  befriedigend  150–199 dpi  ausreichend
+    unter 150    mangelhaft
+  Die Schwellen gelten für jede Papiergröße. Angezeigt im Fenster
+  "Ausgabegröße" (mit den für 300 dpi nötigen Pixeln) und kurz im
+  Bedienfeld unter "Größe". Bei Pixelgrößen (z. B. Full HD) steht dort,
+  bis zu welcher Papiergröße das Bild sehr gut (300 dpi) bzw. gut (250 dpi)
+  reicht.
+
+Speichern (Strg+S): als JPG, TIFF oder PNG in der gewählten Ausgabegröße.
+  Bei JPG werden Kameradaten (EXIF) und Farbprofil übernommen.
+  HEIC-, HIF- und DNG-Fotos werden standardmäßig als JPG gespeichert. Das Original bleibt unverändert.
+
+Zusatzprogramme (z. B. "Vertical3 Drucken") werden mit ihrem eigenen Setup
+  installiert. Danach erscheinen sie nach einem Neustart von Vertical3 im
+  Menü Datei und als Knopf im Bedienfeld. Übersicht: Hilfe → Zusatzprogramme.
+  Entfernen: Hilfe → Zusatzprogramme → Zusatz auswählen → "Ausgewähltes
+  Zusatzprogramm entfernen". Das löscht Programmdatei, Kurzanleitung,
+  Startmenü-Eintrag und den Eintrag in Windows-Einstellungen → Apps.
+  (Vorher das Zusatzprogramm schließen; danach Vertical3 neu starten.)
+
+Zusatzprogramm "Vertical3 Kameraneigung" (eigenes Setup): Manche Kameras
+  (iPhone, Leica M11/Q3/SL3/D-Lux 8, Lumix L10 …) speichern beim Fotografieren
+  ihre Neigungswinkel in der Bilddatei. Mit diesem Zusatz übernimmt Vertical3
+  diese Winkel beim Öffnen automatisch als Roll und Pitch (Knopf
+  "Kameraneigung" stellt sie wieder her) und kann ganze Ordner in einem
+  Durchgang korrigieren (Stapelverarbeitung). Ohne den Zusatz wird mit
+  der Automatik bzw. den Reglern korrigiert. Anleitung: LIESMICH-Kameraneigung.txt
+
+
+3. UPDATES
+----------
+Neue Funktionen kommen als Update-Datei mit der Endung .v3update.
+Doppelklicken – oder in Vertical3 über Hilfe → "Update installieren …".
+Vertical3 zeigt, was neu ist, fragt nach, installiert und startet neu.
+
+Vorher wird der bisherige Stand gesichert. Gefällt das Update nicht:
+Hilfe → "Letztes Update rückgängig machen".
+Nur Update-Dateien aus vertrauenswürdiger Quelle installieren.
+
+
+4. KAMERAPROFILE
+----------------
+Kameraprofile (Endung .v3cam) sagen Vertical3, welche Kamera ein Foto
+gemacht hat und wie groß die Kleinbild-Brennweite ist (wichtig für eine
+genaue Korrektur). Importieren: .v3cam-Datei doppelklicken oder Menü
+Kameras → "Kameraprofil importieren …". Übersicht: Kameras → "Bekannte
+Kameras anzeigen". Die Angaben zu Neigungsdaten in den Profilen nutzt nur
+das Zusatzprogramm "Vertical3 Kameraneigung" – Einzelheiten in dessen
+LIESMICH-Kameraneigung.txt.

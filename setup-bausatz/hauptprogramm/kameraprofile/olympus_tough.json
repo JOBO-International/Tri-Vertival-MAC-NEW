@@ -1,0 +1,14 @@
+{
+  "name": "OM System / Olympus TG (Tough)",
+  "hersteller": "OM System",
+  "modelle": "TG-7, TG-6, TG-5 und ältere Tough-Modelle",
+  "neigung": "keine – per Regler oder Kanten markieren",
+  "formate": "JPEG, DNG (aus ORF)",
+  "match": {
+    "Make": "olympus|om digital",
+    "Model": "^(TG-|TOUGH)"
+  },
+  "keine_neigungsdaten": true,
+  "cropfaktor": 5.6,
+  "hinweis": "Kompaktkamera mit kleinem Sensor: Brennweite × 5,6."
+}

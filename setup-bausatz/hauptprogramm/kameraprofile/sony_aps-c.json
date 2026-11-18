@@ -1,0 +1,21 @@
+{
+  "name": "Sony APS-C (Alpha 6000-Serie, ZV-E10, FX30 …)",
+  "hersteller": "Sony",
+  "modelle": "Alpha 6000–6700, ZV-E10 (II), FX30, NEX, Alpha 77/68",
+  "neigung": "keine – per Regler oder Kanten markieren",
+  "formate": "JPEG, HEIF (.HIF), DNG (aus ARW)",
+  "match": {
+    "Make": "sony",
+    "Model": "ILCE-6|ZV-E10|ILME-FX30|NEX|ILCA-(77|68)|SLT"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "cropfaktor": 1.5,
+  "hinweis": "APS-C-Sensor: Brennweite × 1,5. Sony speichert keine lesbaren Neigungswinkel."
+}

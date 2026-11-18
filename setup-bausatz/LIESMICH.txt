@@ -1,0 +1,32 @@
+﻿Tri-Vertical - Setup-Bausatz
+============================
+
+Mit diesem Bausatz entstehen die Setups direkt auf diesem PC. Dadurch
+erscheint beim Installieren keine Windows-Warnung ("Der Computer wurde
+durch Windows geschuetzt").
+
+So geht's:
+  1. Doppelklick auf "Setups bauen.bat".
+  2. Nach wenigen Sekunden oeffnet sich der Ordner "Setups" mit allen
+     Setups:
+       Tri-Vertical-Setup-3.9.0.exe              (Hauptprogramm)
+       Tri-Vertical-Drucken-Setup-2.2.exe
+       Tri-Vertical-Filter-Setup-1.5.exe
+       Tri-Vertical-KI-Fuellen-Setup-1.2.exe
+       Tri-Vertical-Rahmen-Setup-1.5.exe
+       Tri-Vertical-Kameraneigung-Setup-1.3.exe
+       Tri-Vertical-Belichter-Setup-1.0.exe      (S/W-Belichter)
+  3. Zuerst das Hauptprogramm installieren, danach die gewuenschten
+     Zusatzprogramme. Vorhandene Installationen werden ersetzt,
+     Einstellungen bleiben erhalten.
+
+Voraussetzung: Inno Setup 6 oder 7 ist installiert.
+
+Ordner:
+  hauptprogramm, drucken, filter, ki, rahmen, kameraneigung, belichter
+  - je ein Programm mit seinem Setup-Skript (*.iss). Jedes *.iss im
+    Bausatz wird von "Setups bauen.bat" automatisch gebaut.
+
+Hinweis: Gibst du ein so gebautes Setup an andere weiter (Mail, USB-Stick,
+Download), sehen diese die Windows-Warnung trotzdem - dagegen hilft nur
+eine digitale Signatur.

@@ -1,0 +1,20 @@
+{
+  "name": "Apple iPhone",
+  "hersteller": "Apple",
+  "modelle": "alle iPhones (ab iPhone 5s)",
+  "neigung": "automatisch (Schwerkraftsensor)",
+  "formate": "JPEG, HEIC, ProRAW-DNG",
+  "match": {
+    "Make": "apple"
+  },
+  "schwerkraft_tag": "AccelerationVector",
+  "schwerkraft_achsen": [
+    1,
+    -1,
+    -1
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "kb_brennweite_standard": 26,
+  "hinweis": "iPhones speichern einen Schwerkraftvektor in den Apple-Herstellerdaten. Daraus werden Roll und Pitch berechnet."
+}

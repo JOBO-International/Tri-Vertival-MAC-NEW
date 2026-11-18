@@ -1,0 +1,19 @@
+{
+  "name": "Sony Vollformat (Alpha 7, 9, 1, ZV-E1, RX …)",
+  "hersteller": "Sony",
+  "modelle": "Alpha 7 / 7R / 7S / 7C, Alpha 9, Alpha 1, ZV-E1, FX3, RX1/RX100, Xperia",
+  "neigung": "keine – per Regler oder Kanten markieren",
+  "formate": "JPEG, HEIF (.HIF), DNG (aus ARW)",
+  "match": {
+    "Make": "sony"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "hinweis": "Sony speichert keine lesbaren Neigungswinkel. Korrektur per Regler oder 'Kanten markieren'."
+}

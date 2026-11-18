@@ -1,0 +1,22 @@
+{
+  "name": "Nikon (Z9, Z8, Z6 III, Z f, D850 …)",
+  "hersteller": "Nikon",
+  "modelle": "Z9, Z8, Z6 III, Z f, D850 und weitere",
+  "neigung": "automatisch – nur mit exiftool",
+  "formate": "JPEG, DNG (aus NEF)",
+  "match": {
+    "Make": "nikon"
+  },
+  "roll_tag": [
+    "Nikon:RollAngle",
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "Nikon:PitchAngle",
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "hinweis_ohne_exiftool": "Nikon speichert die Neigung verschlüsselt – zum Auslesen wird exiftool benötigt (siehe Hilfe → Anleitung, Abschnitt 4).",
+  "hinweis": "Nikon legt Roll und Pitch verschlüsselt in den Herstellerdaten ab; exiftool entschlüsselt sie."
+}

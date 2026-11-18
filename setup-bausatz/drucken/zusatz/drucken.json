@@ -1,0 +1,9 @@
+{
+  "name": "Tri-Vertical Drucken",
+  "exe": "Vertical3-Druck.exe",
+  "version": "2.2",
+  "menuetext": "Drucken …",
+  "taste": "Strg+P",
+  "knopf": "Drucken   ·   Strg+P",
+  "beschreibung": "Drucken mit Papier- und Bildformaten (auch randlos), Vorschau und Kopien"
+}

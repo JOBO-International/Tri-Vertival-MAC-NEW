@@ -1,0 +1,10 @@
+{
+  "name": "Tri-Vertical Kameraneigung",
+  "exe": "Vertical3-Neigung.exe",
+  "version": "1.3",
+  "rolle": "startwerte",
+  "ohne_bild": true,
+  "menuetext": "Stapelverarbeitung mit Kameraneigung …",
+  "knopf": "Stapelverarbeitung (Kameraneigung)",
+  "beschreibung": "Übernimmt die Neigungswinkel, die die Kamera in der Bilddatei hinterlegt (iPhone, Leica, Lumix …), automatisch als Korrektur; Stapelverarbeitung ganzer Ordner"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "OM System / Olympus (OM-1, OM-3, OM-5, E-M1 …)",
+  "hersteller": "OM System",
+  "modelle": "OM-1 (II), OM-3, OM-5, E-M1 (II/III/X), E-M5, E-M10, PEN und weitere",
+  "neigung": "automatisch – nur mit exiftool",
+  "formate": "JPEG, DNG (aus ORF)",
+  "match": {
+    "Make": "olympus|om digital"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "cropfaktor": 2.0,
+  "hinweis_ohne_exiftool": "OM System/Olympus speichert die Neigung in den Herstellerdaten – zum Auslesen wird exiftool benötigt (siehe Hilfe → Anleitung, Abschnitt 4).",
+  "hinweis": "Micro-Four-Thirds-Sensor: Brennweite × 2. Roll und Pitch stehen in den Herstellerdaten (exiftool nötig)."
+}

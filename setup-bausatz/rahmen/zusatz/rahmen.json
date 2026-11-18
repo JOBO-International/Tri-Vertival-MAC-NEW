@@ -1,0 +1,9 @@
+{
+  "name": "Tri-Vertical Rahmen",
+  "exe": "Vertical3-Rahmen.exe",
+  "version": "1.5",
+  "menuetext": "Rahmen …",
+  "taste": "Strg+R",
+  "knopf": "Rahmen   ·   Strg+R",
+  "beschreibung": "19 Rahmen (Bilderrahmen, Passepartout, Polaroid, Dia, Film …) mit Beschriftung; gerahmtes Bild speichern oder drucken"
+}

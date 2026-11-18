@@ -1,0 +1,43 @@
+﻿TRI-VERTICAL KI-FÜLLEN 1.0 – Zusatzprogramm
+========================================
+
+Voraussetzung: Tri-Vertical ab Version 2.8 ist installiert.
+
+Wozu? Beim Ausrichten wird das Bild verzerrt (z. B. trapezförmig). Damit
+keine leeren Ecken bleiben, schneidet Tri-Vertical normalerweise zu – das
+Bild wird dabei kleiner. KI-Füllen geht den anderen Weg: Das Bild behält
+das Format des Originals (gleiches Seitenverhältnis, gleiche Pixelzahl),
+und die leeren Ränder werden von einer KI passend zum Bild ergänzt.
+
+Bedienung:
+  1. Bild in Tri-Vertical öffnen und ausrichten (Neigungsdaten oder Taste A).
+  2. Datei → "Ränder mit KI füllen …" oder Strg+K oder Knopf im Bedienfeld.
+  3. Offline oder Online wählen und "Ränder mit KI füllen" klicken.
+  4. Ergebnis prüfen (Ansicht "Vergleich", Trennlinie ziehen) und speichern.
+     Das gefüllte Bild lässt sich auch direkt an "Filter" oder "Drucken"
+     weitergeben, falls diese Zusätze installiert sind.
+
+Offline (Standard):
+  • kostenlos, das Bild verlässt den PC nicht
+  • KI-Modell LaMa, rechnet auf dem Prozessor (je nach PC etwa 5–60 s)
+  • das Modell (93 MB) wird beim ersten Gebrauch einmalig aus dem
+    Internet geladen (OpenCV-Projekt auf GitHub), danach geht es offline
+  • sehr gut für Himmel, Wolken, Fassaden, Wiesen, Pflaster
+  • schwächer bei angeschnittenen Gegenständen am Rand (z. B. Autos)
+
+Online (Stability AI):
+  • besser bei angeschnittenen Gegenständen, kann aber auch Dinge
+    "erfinden", die es nicht gab – Ergebnis immer prüfen
+  • benötigt ein Konto mit Guthaben bei Stability AI und einen
+    API-Schlüssel (platform.stability.ai/account/keys), Kosten etwa
+    5 Cent pro gefülltem Bild, Abrechnung direkt bei Stability AI
+  • das Bild wird dazu an Stability AI hochgeladen
+  • der Schlüssel wird verschlüsselt nur auf diesem PC gespeichert
+  • optional kann das Motiv kurz beschrieben werden (am besten Englisch,
+    z. B. "modern apartment building, blue sky")
+
+Hinweis: Die gefüllten Ränder sind von der KI erzeugt und zeigen nicht
+die Wirklichkeit. Für Dokumentationsfotos besser zuschneiden.
+
+Deinstallation: Windows-Einstellungen → Apps → "Tri-Vertical KI-Füllen".
+Lizenzen der KI-Bestandteile: ki\LIZENZEN-KI.txt

@@ -1,0 +1,13 @@
+{
+  "name": "Xiaomi Smartphone (z. B. Xiaomi 15 Ultra)",
+  "hersteller": "Xiaomi",
+  "modelle": "15 Ultra und andere Xiaomi-Smartphones",
+  "neigung": "keine – per Regler oder Kanten markieren",
+  "formate": "JPEG, HEIC, DNG",
+  "match": {
+    "Make": "xiaomi"
+  },
+  "keine_neigungsdaten": true,
+  "kb_brennweite_standard": 23,
+  "hinweis": "Xiaomi-Smartphones speichern keine Neigungswinkel. Korrektur per Regler oder 'Kanten markieren'."
+}

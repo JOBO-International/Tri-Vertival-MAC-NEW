@@ -1,0 +1,28 @@
+﻿TRI-VERTICAL DRUCKEN 2.0 – Zusatzprogramm
+======================================
+
+Voraussetzung: Tri-Vertical ab Version 2.8 ist installiert.
+
+Neu in 2.0: Rahmen und Beschriftung sind in das eigene Zusatzprogramm
+"Tri-Vertical Rahmen" umgezogen. Drucken kümmert sich nur noch ums Drucken.
+
+Installation: "Vertical3-Drucken-Setup.exe" doppelklicken (auch über eine
+ältere Version). Das Setup findet Tri-Vertical selbst. Danach Tri-Vertical neu
+starten – im Menü Datei und im Bedienfeld erscheint "Drucken" (Strg+P).
+
+Bedienung: Bild in Tri-Vertical öffnen und korrigieren, dann Drucken wählen.
+Das Druckfenster übernimmt Foto und Korrektur:
+  • Drucker, Papier (aus dem Druckertreiber, auch randlose Fotoformate),
+    Ausrichtung, "Druckereinstellungen …" für Papiersorte und Qualität
+  • Bildgröße: maximal, randlos, 9×13 … 30×45 cm, A5–A3, eigene Größe;
+    "Ganzes Foto zeigen" oder "Format füllen" (Ausschnitt mit der Maus
+    in der Vorschau verschieben)
+  • Kopien; unten stehen Blatt- und Fotogröße und die Druckauflösung (dpi)
+
+Mit Rahmen drucken: in "Tri-Vertical Rahmen" den Rahmen gestalten und dort
+auf "Drucken …" klicken – das gerahmte Bild öffnet sich im Druckfenster.
+
+Das Zusatzprogramm lässt sich auch allein starten (Startmenü → Tri-Vertical →
+Tri-Vertical Drucken); es fragt dann nach einem Bild.
+
+Deinstallation: Windows-Einstellungen → Apps → "Tri-Vertical Drucken".

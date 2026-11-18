@@ -1,0 +1,10 @@
+package main
+
+import (
+	. "github.com/lxn/walk/declarative"
+)
+
+func main() {
+	MainWindow{Title: "Vertical3 Test", Size: Size{400, 200}, Layout: VBox{},
+		Children: []Widget{Label{Text: "Hallo Windows – äöü"}, PushButton{Text: "OK"}, Slider{MinValue: 0, MaxValue: 100}}}.Run()
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Fujifilm X-Serie (X-T5, X-H2, X100VI, X-S20 …)",
+  "hersteller": "Fujifilm",
+  "modelle": "alle X-Modelle: X-T, X-H, X-S, X-E, X-Pro, X-M, X100, XF10 …",
+  "neigung": "meist keine – per Regler oder Kanten markieren",
+  "formate": "JPEG, HEIF (.HIF), DNG (aus RAF)",
+  "match": {
+    "Make": "fujifilm"
+  },
+  "roll_tag": [
+    "RollAngle"
+  ],
+  "pitch_tag": [
+    "PitchAngle"
+  ],
+  "roll_faktor": 1.0,
+  "pitch_faktor": 1.0,
+  "cropfaktor": 1.5,
+  "hinweis": "APS-C-Sensor: Brennweite × 1,5. Fujifilm speichert in der Regel keine Neigungswinkel."
+}

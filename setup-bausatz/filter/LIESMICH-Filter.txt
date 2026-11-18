@@ -1,0 +1,49 @@
+﻿TRI-VERTICAL FILTER 1.5 – Zusatzprogramm
+=====================================
+
+Voraussetzung: Tri-Vertical ab Version 2.8 ist installiert.
+
+Installation: "Vertical3-Filter-Setup.exe" doppelklicken. Danach Tri-Vertical
+neu starten – im Menü Datei und im Bedienfeld erscheint "Filter"
+(Tastenkürzel Strg+F). Das Foto wird samt Perspektivkorrektur übernommen.
+
+Bedienung:
+  • Filter: Klick auf ein Vorschaubild. 55 Looks in neun Gruppen:
+    Farbe          Lebendig, Weich & hell, Herbst, Nordisch, Dramatisch, HDR-Look
+    Kamera-Looks   Natürlich, Analogkino, Zeitgenössisch, Intensiv, Diafilm,
+                   Bleichbad, Goldton, Petrol, Blauton
+    Farbnegativ    Porträtfilm 160/400, Alltagsfilm 200, Grünstichfilm 400,
+                   Brillantnegativ 100, Kunstlichtfilm 500T, Abgelaufener Film,
+                   Film warm, Film kühl
+    Diafilm        Landschaftsdia 50, Neutraldia 100, Kühldia 100,
+                   Klassikdia 64, Cross (crossentwickelt)
+    Sofortbild     Sofortbild, Sofortbild warm, Sofortbild kühl, Sofortbild S/W
+    Retro & Kino   Kino, Vintage, Matt
+    Schwarzweiß    klassisch, kontrastreich, Rotfilter, weich
+    Schwarzweißfilm  S/W-Film 400 körnig/weich, S/W-Film 100 feinkörnig,
+                   S/W-Film gepusht 3200, Infrarot S/W, Orthochromatisch
+    Edeldruck & Tonung  Sepia, Selen, Palladium, Platin, Van-Dyke-Braun,
+                   Albumin, Salzpapier, Cyanotypie
+    Die Filmlooks sind den typischen Eigenschaften analoger Filme und
+    Verfahren nachempfunden, keine exakten Nachbildungen.
+  • Stärke: wie stark der Filter wirkt (0–100 %).
+  • Feinabstimmung: Belichtung, Kontrast, Lichter, Tiefen, Sättigung,
+    Wärme, Klarheit, Vignette, Körnung. Die Regler zeigen die Werte des
+    gewählten Filters und lassen sich von dort aus verändern.
+    "Auf Filterwerte zurücksetzen" stellt den Filter wieder her.
+  • Ansicht: Nachher, Vorher oder Vergleich – beim Vergleich die
+    Trennlinie mit der Maus verschieben.
+  • "Als eigenen Filter speichern …": aktuelle Einstellung unter eigenem
+    Namen sichern; sie erscheint unter "Eigene Filter".
+  • "Bild speichern …": volle Auflösung als JPG, TIFF oder PNG; das
+    Original bleibt unverändert.
+  • "Rahmen …" (nur mit dem Zusatz "Tri-Vertical Rahmen"): übergibt das
+    gefilterte Bild an das Rahmenfenster – dort Rahmen und Beschriftung
+    wählen; von dort geht es mit "Filter …" auch wieder zurück.
+  • "Drucken …" (nur mit dem Zusatz "Tri-Vertical Drucken"): übergibt das
+    gefilterte Bild direkt an das Druckfenster.
+
+Allein starten: Startmenü → Tri-Vertical → Tri-Vertical Filter (fragt nach
+einem Bild, dann ohne Perspektivkorrektur).
+
+Deinstallation: Windows-Einstellungen → Apps → "Tri-Vertical Filter".
