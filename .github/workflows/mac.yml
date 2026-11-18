@@ -19,9 +19,10 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.24'
+          cache-dependency-path: programm/go.sum
       - name: Tri-Vertical.app bauen
         working-directory: programm
-        run: ./baue_mac.sh
+        run: bash baue_mac.sh
       - name: ZIP erzeugen
         run: ditto -c -k --keepParent mac-build/Tri-Vertical.app Tri-Vertical-Mac-${{ matrix.arch }}.zip
       - uses: actions/upload-artifact@v4
