@@ -28,7 +28,7 @@ f="$1"
 o="$OUT/o/$(echo "$f" | tr / _).o"
 exec clang++ -arch "$CARCH" -O2 -std=gnu++14 -D_USE_MATH_DEFINES -w -I. -DLIBRAW_NOTHREADS -DUSE_X3FTOOLS -DLIBRAW_NODLL -c "$f" -o "$o"
 CC
-  (cd "$T/src" && find src -name '*.cpp' ! -path '*integration*' | xargs -P 8 -n 1 sh "$T/cc1.sh")
+  (cd "$T/src" && find src -name '*.cpp' ! -path '*integration*' ! -name '*_ph.cpp' | xargs -P 8 -n 1 sh "$T/cc1.sh")
   ar rcs "$OUT/libraw.a" "$OUT"/o/*.o
   rm -rf "$OUT/o" "$T"
   N=$(ar t roh/lib/darwin/libraw.a | wc -l)
